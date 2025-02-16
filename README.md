@@ -5,6 +5,7 @@
 - Due to API constraints, the maximum value for the limit parameter is currently set at 1000
 
 **Data Cleaning and Handling Inconsistencies**
+
 In this section, we will:
 
 - Fix incorrect data formats (e.g., convert date from string to datetime).
