@@ -28,7 +28,7 @@ for i in range(0, 4000, 1000):
   data_json = json.loads(response.read())
   data_list.extend(data_json["results"])
 
-with open("raw_fda_soft_drink_data.json", "w") as file:
+with open("data/raw_fda_soft_drink_data.json", "w") as file:
     json.dump(data_list, file, indent=4)
 
 print("Data has been saved to raw_fda_soft_drink_data.json")
