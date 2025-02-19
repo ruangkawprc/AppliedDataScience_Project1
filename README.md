@@ -16,9 +16,7 @@
 ```
 3. **Alternatively, Use Jupyter Notebook:**
 
-   If you prefer to use a Jupyter Notebook for analysis, open the notebook file and run the cells:
-
-   fda_food_data_analysis.ipynb
+   If you prefer to use a Jupyter Notebook for analysis, open the notebook file and run the cells: fda_food_data_analysis.ipynb
 
 
 ## Introduction
