@@ -500,6 +500,7 @@ print("Final shape:", df_encoded.shape)
 print("\nMemory usage:", df_encoded.memory_usage().sum() / 1024**2, "MB")
 print("\nSample of final features:")
 print(df_encoded.head())
+df_encoded.to_csv("data/processed_fda_soft_drink_data.csv", index=False)
 
 """# **VI. Challenges faced and future recommendations**
 
