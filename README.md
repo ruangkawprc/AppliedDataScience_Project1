@@ -1,4 +1,4 @@
-# FDA Food Event: Soft Drink/Water Products
+# FDA Food Event: Soft Drink/Water 
 
 ## Quick Start
 
