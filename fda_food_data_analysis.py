@@ -138,7 +138,6 @@ summary
 
 """From last summary table, we find some descriptive insights:
 
-### **Key Descriptive Insights**  
 
 1. **Data Overview**: The dataset contains **1,020 records** and **530 features**, including timestamps, categorical variables, and one-hot encoded `reaction_` and `outcome_` variables.  
 
@@ -174,8 +173,7 @@ plt.savefig('EDA_figures/age_group_distribution.png')
 *   The distribution of the population is mainly concentrated in the two intervals of <18 and 40-49.
 *   It declines sharply after the age of 50-59 years.
 
-
-
+**Anomaly analysis:**
 """
 
 plt.figure(figsize=(12, 6))
@@ -331,7 +329,10 @@ plt.ylabel("Outcomes")
 plt.show()
 plt.savefig('EDA_figures/correlation_heatmap_top_10_reactions_outcomes.png')
 
-"""Obvious relationship between congenital anomaly and nausea is shown, also combined with some other significant relation such as death and abdominal pain upper, we could make further research on them."""
+"""Obvious relationship between congenital anomaly and nausea is shown, also combined with some other significant relation such as death and abdominal pain upper, we could make further research on them.
+
+**Relationship Between Age and Gender Distribution:**
+"""
 
 sns.scatterplot(data=df, x='gender', y='age')
 plt.title("age vs gender")
@@ -341,12 +342,11 @@ plt.legend(title="age vs gender")
 plt.show()
 plt.savefig('EDA_figures/age_vs_gender.png')
 
-"""The age distribution of male and female is a little different. There are more higher aged male than female.  Besides this, the age distribution of male is more even than female
+"""The age distribution of male and female is a little different. There are more higher aged male than female.  Besides this, the age distribution of male is more even than female"""
 
-# **V. Feature engineering process**
 
-**Time-based Feature Engineering**
-"""
+
+"""**Time-based Feature Engineering**"""
 
 # Calculate time difference between report and incident
 df['report_delay'] = (df['date_created'] - df['date_started']).dt.days
@@ -507,20 +507,20 @@ print(df_encoded.head())
 
 
 *   While obtaining the data from the FDA, there is a constraint of 1,000 reports per request, so we came up with the idea of using a for-loop for multiple requests.
-*   List item
 
 
 **Future Recommendations:**
 
 
 *   It is important to note that products like Diet Coke, which result in the most adverse events, may not necessarily be dangerous because of the product itself. Instead, it could be because it is consumed more frequently than others, leading to more adverse events. Therefore, in the future, it might be worth considering the ratio of adverse events to the number of times a product is consumed.
-*   List item
 
 # **VII. Each member’s contribution**
 
 
 *   **Preach Apintanapong:** Preach is responsible for finding the data source from FDA, acquiring it using API requests, and performing data cleaning processes, as well as handling the GitHub repository.
-*   List item
+*   **Liu Yang:** Liu is responsible for conducting exploratory data analysis (EDA), creating visualizations using tools like Matplotlib and Seaborn, identifying trends and anomalies in the data, and summarizing key insights to guide further analysis.
+*   **Jingxi Li:**Jingxi is responseble for conducting exploratory data analysis, exploring the data by distribution and covariance analysis, as well as helping to optimize the API acquiring process.
+*   **Yemin Wang:** Yemin is responsible for data preprocessing and feature engineering, including encoding catagorical variables and create new features
 
 # **VIII. Link to your GitHub repository**
 [https://github.com/ruangkawprc/AppliedDataScience_Project1](https://github.com/ruangkawprc/AppliedDataScience_Project1)
