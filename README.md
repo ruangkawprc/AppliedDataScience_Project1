@@ -1,18 +1,26 @@
-## data_cleaning.ipynb
-**Data Acquisition**
-- In this section, we utilize openFDA's Food API to explore adverse events related to FDA-regulated foods, dietary supplements, and cosmetics.
-- Specifically, our focus is on the Soft Drink/Water industry.
-- Due to API constraints, the maximum value for the limit parameter is currently set at 1000
+# FDA Food Event: Soft Drink/Water Products
 
-**Data Cleaning and Handling Inconsistencies**
+## Quick Start
 
-In this section, we will:
+1. **Clone the Repository:**
+```
 
-- Fix incorrect data formats (e.g., convert date from string to datetime).
-- Correct the consumer and product columns, which contain data in nested dictionary format, by separating them into individual columns.
-- Handle lists in the outcomes and reactions columns by creating dummy variables for each item in the list for further analysis.
-- Remove missing values.
-- Remove duplicate rows.
-- Standardize all alphabets to lower case letters.
-  
-Lastly, we will show the summary of the unique values for each category.
+   git clone https://github.com/ruangkawprc/AppliedDataScience_Project1.git
+```
+2. **Run the Analysis Script:**
+
+   Navigate to the project directory and run the script to start the analysis:
+```
+
+   python fda_food_data_analysis.py
+```
+3. **Alternatively, Use Jupyter Notebook:**
+
+   If you prefer to use a Jupyter Notebook for analysis, open the notebook file and run the cells: fda_food_data_analysis.ipynb
+
+
+## Introduction
+
+As one of the most commonly consumed products, soft drinks/water products have far-reaching effects beyond simple weight gain. In severe cases, consumption can lead to hospitalization, disability, or even life-threatening consequences. To better understand these risks, we leverage the openFDA Food, Dietary Supplements, and Cosmetic Adverse Event API, which provides data from the Center for Food Safety and Applied Nutrition's Adverse Event Reporting System (CAERS). This database contains information on adverse event and product complaint reports submitted to the FDA from 2004 to 2025-02-16.
+
+Our goal is to explore various product types within the soft drink and water industry, identify vulnerable groups (such as age and gender), and analyze the reactions, severity of impact, and correlation of symptoms associated with these products.
