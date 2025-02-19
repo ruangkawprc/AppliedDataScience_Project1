@@ -28,5 +28,5 @@ Our goal is to explore various product types within the soft drink and water ind
 ## Datasets
 
 1. **Raw Dataset:** raw_fda_soft_drink_data.json
-2. **Cleaned Dataset:** cleaned_fda_soft_drink_data.json
-3. **Processed Dataset:** processed_fda_soft_drink_data.json
+2. **Cleaned Dataset:** cleaned_fda_soft_drink_data.csv
+3. **Processed Dataset:** processed_fda_soft_drink_data.csv
