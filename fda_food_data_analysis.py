@@ -167,6 +167,7 @@ plt.title('Age Group Distribution')
 plt.xlabel('Age Group')
 plt.ylabel('Count')
 plt.show()
+plt.savefig('EDA_figures/age_group_distribution.png')
 
 """It is easily found that:
 
@@ -195,6 +196,7 @@ plt.grid(True)
 # Show the plots
 plt.tight_layout()
 plt.show()
+plt.savefig('EDA_figures/distribution_age_and_date_started.png')
 
 """**Initial Insights from Boxplots:**
 
@@ -220,6 +222,7 @@ top10_foodp = Top10_food.plot(kind='barh', title="Top 10 Reported Brands")
 for index, value in enumerate(Top10_food):
     top10_foodp.text(value + 0.5, index, str(int(value)), va='center')
 plt.show()
+plt.savefig('EDA_figures/top_10_reported_brands.png')
 
 """Diet Coke is showing a faulty lead."""
 
@@ -237,6 +240,7 @@ plt.ylabel("Number of Reports")
 plt.legend(title="Product Name", bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.grid(True)
 plt.show()
+plt.savefig('EDA_figures/trend_top_10_reported_products_over_time.png')
 
 """With the exception of heavy fluctuation of Diet Coke and Exemption 4, the rest brands are basically stable between 0 and 2 across years
 
@@ -252,6 +256,7 @@ for index, value in enumerate(top10_r):
     top10_rp.text(value + 0.5, index, str(int(value)), va='center')
 
 plt.show()
+plt.savefig('EDA_figures/top_10_reactions.png')
 
 """We found that nausea, vomiting, and diarrhoea are the most common reactions."""
 
@@ -268,6 +273,7 @@ plt.ylabel("Number of Reports")
 plt.legend(title="Reactions Name", bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.grid(True)
 plt.show()
+plt.savefig('EDA_figures/trend_top_10_reported_reaction_over_time.png')
 
 """With the exception of heavy fluctuation of nausea, diarrhoea, and vomiting, the rest reactions are basically stable between 0 and 4 across years.
 
@@ -282,6 +288,7 @@ outcome_countsp = outcome_counts.plot(kind='barh', title="Health Outcomes Distri
 for index, value in enumerate(outcome_counts):
     outcome_countsp.text(value + 0.5, index, str(int(value)), va='center')
 plt.show()
+plt.savefig('EDA_figures/health_outcomes_distribution.png')
 
 """From the bar chart of above, the least frequent outcomes include "congenital anomaly" and "allergic reaction," each with only 1 occurrence.
 
@@ -302,6 +309,7 @@ plt.figure(figsize=(10, 6))
 sns.heatmap(correlation_subset, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
 plt.title("Correlation Heatmap (Top 10 Reactions)")
 plt.show()
+plt.savefig('EDA_figures/correlation_heatmap_top_10_reactions.png')
 
 """This heatmap shows that the absence of concurrent symptoms was demonstrated."""
 
@@ -321,6 +329,7 @@ plt.title("Correlation Heatmap (Top 10 Reactions & Outcomes)")
 plt.xlabel("Top 10 Reactions")
 plt.ylabel("Outcomes")
 plt.show()
+plt.savefig('EDA_figures/correlation_heatmap_top_10_reactions_outcomes.png')
 
 """Obvious relationship between congenital anomaly and nausea is shown, also combined with some other significant relation such as death and abdominal pain upper, we could make further research on them."""
 
@@ -330,6 +339,7 @@ plt.xlabel("gender")
 plt.ylabel("age")
 plt.legend(title="age vs gender")
 plt.show()
+plt.savefig('EDA_figures/age_vs_gender.png')
 
 """The age distribution of male and female is a little different. There are more higher aged male than female.  Besides this, the age distribution of male is more even than female
 
@@ -490,3 +500,28 @@ print("Final shape:", df_encoded.shape)
 print("\nMemory usage:", df_encoded.memory_usage().sum() / 1024**2, "MB")
 print("\nSample of final features:")
 print(df_encoded.head())
+
+"""# **VI. Challenges faced and future recommendations**
+
+**Challenges:**
+
+
+*   While obtaining the data from the FDA, there is a constraint of 1,000 reports per request, so we came up with the idea of using a for-loop for multiple requests.
+*   List item
+
+
+**Future Recommendations:**
+
+
+*   It is important to note that products like Diet Coke, which result in the most adverse events, may not necessarily be dangerous because of the product itself. Instead, it could be because it is consumed more frequently than others, leading to more adverse events. Therefore, in the future, it might be worth considering the ratio of adverse events to the number of times a product is consumed.
+*   List item
+
+# **VII. Each member’s contribution**
+
+
+*   **Preach Apintanapong:** Preach is responsible for finding the data source from FDA, acquiring it using API requests, and performing data cleaning processes, as well as handling the GitHub repository.
+*   List item
+
+# **VIII. Link to your GitHub repository**
+[https://github.com/ruangkawprc/AppliedDataScience_Project1](https://github.com/ruangkawprc/AppliedDataScience_Project1)
+"""
