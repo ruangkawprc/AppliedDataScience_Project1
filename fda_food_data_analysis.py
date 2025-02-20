@@ -522,8 +522,8 @@ df_encoded.to_csv("data/processed_fda_soft_drink_data.csv", index=False)
 
 *   **Preach Apintanapong:** Preach is responsible for finding the data source from FDA, acquiring it using API requests, and performing data cleaning processes, as well as handling the GitHub repository.
 *   **Liu Yang:** Liu is responsible for conducting exploratory data analysis (EDA), creating visualizations using tools like Matplotlib and Seaborn, identifying trends and anomalies in the data, and summarizing key insights to guide further analysis.
-*   **Jingxi Li:**Jingxi is responseble for conducting exploratory data analysis, exploring the data by distribution and covariance analysis, as well as helping to optimize the API acquiring process.
-*   **Yemin Wang:** Yemin is responsible for data preprocessing and feature engineering, including encoding catagorical variables and create new features
+*   **Jingxi Li:** Jingxi is responsible for conducting exploratory data analysis, exploring the data by distribution and covariance analysis, as well as helping to optimize the API acquiring process.
+*   **Yemin Wang:** Yemin is responsible for data preprocessing and feature engineering, including encoding catagorical variables and creating new features
 
 # **VIII. Link to your GitHub repository**
 [https://github.com/ruangkawprc/AppliedDataScience_Project1](https://github.com/ruangkawprc/AppliedDataScience_Project1)
