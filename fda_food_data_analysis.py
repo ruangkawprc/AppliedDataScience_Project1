@@ -167,8 +167,9 @@ sns.countplot(data=df, x='age_group', order=labels, palette="viridis")
 plt.title('Age Group Distribution')
 plt.xlabel('Age Group')
 plt.ylabel('Count')
-plt.show()
 plt.savefig('EDA_figures/age_group_distribution.png')
+plt.show()
+
 
 """It is easily found that:
 
@@ -195,8 +196,9 @@ plt.grid(True)
 
 # Show the plots
 plt.tight_layout()
-plt.show()
 plt.savefig('EDA_figures/distribution_age_and_date_started.png')
+plt.show()
+
 
 """**Initial Insights from Boxplots:**
 
@@ -221,8 +223,9 @@ plt.figure(figsize=(8,5))
 top10_foodp = Top10_food.plot(kind='barh', title="Top 10 Reported Brands")
 for index, value in enumerate(Top10_food):
     top10_foodp.text(value + 0.5, index, str(int(value)), va='center')
-plt.show()
 plt.savefig('EDA_figures/top_10_reported_brands.png')
+plt.show()
+
 
 """Diet Coke is showing a faulty lead."""
 
@@ -239,8 +242,9 @@ plt.xlabel("Year")
 plt.ylabel("Number of Reports")
 plt.legend(title="Product Name", bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.grid(True)
-plt.show()
 plt.savefig('EDA_figures/trend_top_10_reported_products_over_time.png')
+plt.show()
+
 
 """With the exception of heavy fluctuation of Diet Coke and Exemption 4, the rest brands are basically stable between 0 and 2 across years
 
@@ -254,9 +258,9 @@ plt.xlabel('Reaction')
 plt.ylabel('Count')
 for index, value in enumerate(top10_r):
     top10_rp.text(value + 0.5, index, str(int(value)), va='center')
-
-plt.show()
 plt.savefig('EDA_figures/top_10_reactions.png')
+plt.show()
+
 
 """We found that nausea, vomiting, and diarrhoea are the most common reactions."""
 
@@ -272,8 +276,9 @@ plt.xlabel("Year")
 plt.ylabel("Number of Reports")
 plt.legend(title="Reactions Name", bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.grid(True)
-plt.show()
 plt.savefig('EDA_figures/trend_top_10_reported_reaction_over_time.png')
+plt.show()
+
 
 """With the exception of heavy fluctuation of nausea, diarrhoea, and vomiting, the rest reactions are basically stable between 0 and 4 across years.
 
@@ -287,8 +292,9 @@ plt.figure(figsize=(8,5))
 outcome_countsp = outcome_counts.plot(kind='barh', title="Health Outcomes Distribution")
 for index, value in enumerate(outcome_counts):
     outcome_countsp.text(value + 0.5, index, str(int(value)), va='center')
-plt.show()
 plt.savefig('EDA_figures/health_outcomes_distribution.png')
+plt.show()
+
 
 """From the bar chart of above, the least frequent outcomes include "congenital anomaly" and "allergic reaction," each with only 1 occurrence.
 
@@ -308,8 +314,9 @@ correlation_subset.columns = clean_reactions
 plt.figure(figsize=(10, 6))
 sns.heatmap(correlation_subset, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
 plt.title("Correlation Heatmap (Top 10 Reactions)")
-plt.show()
 plt.savefig('EDA_figures/correlation_heatmap_top_10_reactions.png')
+plt.show()
+
 
 """This heatmap shows that the absence of concurrent symptoms was demonstrated."""
 
@@ -328,8 +335,9 @@ sns.heatmap(correlation_subset_reformatted, annot=True, cmap="coolwarm", fmt=".2
 plt.title("Correlation Heatmap (Top 10 Reactions & Outcomes)")
 plt.xlabel("Top 10 Reactions")
 plt.ylabel("Outcomes")
-plt.show()
 plt.savefig('EDA_figures/correlation_heatmap_top_10_reactions_outcomes.png')
+plt.show()
+
 
 """Obvious relationship between congenital anomaly and nausea is shown, also combined with some other significant relation such as death and abdominal pain upper, we could make further research on them.
 
@@ -341,8 +349,9 @@ plt.title("age vs gender")
 plt.xlabel("gender")
 plt.ylabel("age")
 plt.legend(title="age vs gender")
-plt.show()
 plt.savefig('EDA_figures/age_vs_gender.png')
+plt.show()
+
 
 """The age distribution of male and female is a little different. There are more higher aged male than female.  Besides this, the age distribution of male is more even than female"""
 
